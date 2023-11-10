@@ -84,7 +84,27 @@ export const EpisodeResultPage = () => {
             maxValue={80}
           />
         </Box>
-        <Flex />
+        <Typography css={styles.resultTitle}>
+          {user}님의 검사 결과
+        </Typography>
+        <Box css={styles.box}>
+          <Box>
+            <Typography css={styles.title}>사회성</Typography>
+            <Typography>정상 범주의 사회성을 가지고 있으나, 남들과 마찰을 빚을 가능성이 있습니다.</Typography>
+          </Box>
+          <Box>
+            <Typography  css={styles.title}>자기 통제</Typography>
+            <Typography>높은 사회성을 지니고 있습니다.</Typography>
+          </Box>
+          <Box>
+            <Typography  css={styles.title}>상황 인지</Typography>
+            <Typography>상황인지 능력이 정상 수준입니다. 하지만, 상황에 대한 심도 있는 이해와 파악이 어려워 추가적인 훈련이 주어지면 더 좋습니다.</Typography>
+          </Box>
+          <Box>
+            <Typography  css={styles.title}>집중력</Typography>
+            <Typography>집중력이 매우 부족합니다. 단순한 집중에도 어려움을 겪고 있습니다. 집중력 향상을 위한 훈련이 필수적입니다.</Typography>
+          </Box>
+        </Box>
         <AppButton
           onClick={() => {
             navigate(EPISODE_PATH);
@@ -137,4 +157,23 @@ const styles = {
     letter-spacing: -0.3px;
     width: 100%;
   `,
+  resultTitle: css`
+    margin-top: 32px;
+    color: #42b752;
+    text-align: center;
+    font-family: Avenir;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
+  `,
+  box: css`
+    padding: 16px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:100%;
+  `
 };

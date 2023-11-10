@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/joy";
-import CorrectIcon from "@/common/assets/CorrectIcon.svg?react";
+import BearIcon from "../assets/bear.svg?react";
 import { css } from "@emotion/react";
 
 export const EpisodeResultHeader = () => {
   return (
     <Box css={styles.container}>
-      <CorrectIcon />
+      <BearIcon />
       <Typography css={styles.title}>
         당신은 진정한 육아 마스터입니다.
       </Typography>
